@@ -1,3 +1,13 @@
+/********************************************************************
+* @Execution    : Desltop/pradeep/Data Structure $ node unOrderedLinkedList.js
+* @description  : unordered linked list
+* @Purpose      : unordered linked list to add if search not availabe else delete
+* @file         : unOrderedLinkedList
+* @author       : PRADEEP B AMIN <pradeepbamin5gmail.com>
+* @version      : v12.10.0
+* @since        : 21-oct-2019
+*
+*********************************************************************/
 try{
 const read = require('readline-sync');
 

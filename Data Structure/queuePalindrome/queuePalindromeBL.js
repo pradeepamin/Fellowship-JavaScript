@@ -2,6 +2,7 @@ const refernceQueue = require('../../Utility/queueUtility');
 var obj = new refernceQueue.Queue();
 
 exports.checkpalindrome = (palindrome) => {
+    try{
     let obj = new refernceQueue.Queue();
 
     for (let i = 0; i < palindrome.length; i++) {
@@ -24,4 +25,10 @@ exports.checkpalindrome = (palindrome) => {
     else {
         console.log(false);
     }
+}
+catch(e)
+{
+    console.log(e.message);
+    console.log(e.name);
+}
 }

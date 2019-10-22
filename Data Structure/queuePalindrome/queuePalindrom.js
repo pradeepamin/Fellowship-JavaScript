@@ -1,35 +1,15 @@
-
-//const reference=require('../../Data Structure/queuePalindrome')
-const refernceQueue=require('../../Utility/queueUtility');
+/********************************************************************
+* @Execution    : Desltop/pradeep/AlgorithmPrograms $ node queuePalindrome.js
+* @description  : Palindrome-Checker
+* @Purpose      : check given string is plainddome or not
+* @file         : Palindrome
+* @author       : PRADEEP B AMIN <pradeepbamin5gmail.com>
+* @version      : v12.10.0
+* @since        : 22-oct-2019
+*
+*********************************************************************/
+const reference=require('../../Data Structure//queuePalindrome/queuePalindromeBL')
 const sc=require('readline-sync');
 let palindrome=sc.question("Enter the string to check for palindrome\n");
-//let str=palindrome.split(',');
-let obj=new refernceQueue.Queue();
-for(let i=0;i<palindrome.length;i++)
-{
- obj.enqueue(palindrome[i]);
- 
-}
-//obj.show();
 
-let reverseString="";
-
-while(!obj.isEmpty())
-{
-    let rearDel=obj.deleteLast();
-    reverseString=reverseString+ rearDel.data;
-}
-console.log("After Reverse=",reverseString);
-
-if(reverseString==palindrome){
-    console.log(true);
-
-}
-else{
-    console.log(false);
-}
-
-
-
-
-//reference.checkpalindrome(palindrome);
+reference.checkpalindrome(palindrome);

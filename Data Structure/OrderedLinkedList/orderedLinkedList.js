@@ -6,10 +6,10 @@
 * @file         : orderedLinkedList
 * @author       : PRADEEP B AMIN <pradeepbamin5gmail.com>
 * @version      : v12.10.0
-* @since        : 15-oct-2019
+* @since        : -oct-2019
 *
 *********************************************************************/
-
+try{
 let sc = require('readline-sync');
 const ls = require('../../Utility/linkedList');
 const util = require('../../Utility/utility');
@@ -40,3 +40,9 @@ var display = linklist.show();
 console.log(display.join(' '));
 
 util.writeFile('file.txt', display)
+}
+catch(e)
+{
+    console.log(e.message);
+    console.log(e.name);
+}
