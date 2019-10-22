@@ -9,10 +9,10 @@
 * @since        : 15-oct-2019
 *
 *********************************************************************/
-const Impt=require('../Utility/utility')
+const Impt=require('../../Utility/utility')
 let start=1,end=100;
 try{
-for(let index=0;index<2;index++)
+for(let index=0;index<10;index++)
 {
     // var arr = new Array();
     let a=[];

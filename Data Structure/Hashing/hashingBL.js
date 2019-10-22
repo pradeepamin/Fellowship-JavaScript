@@ -19,9 +19,9 @@ console.log("s1",s1);
 
 for( let i in s1)
 {
-    console.log("i",i);
+    //console.log("i",i);
     let j=parseInt(s1[i])%11;
-    console.log(j);
+    //console.log(j);
     array[j].insert(parseInt(s1[i]));
 
 }
@@ -29,4 +29,5 @@ for( let i in array)
 {
     console.log(i);
     console.log(array[i]);
+    //array[i].show();
 }
