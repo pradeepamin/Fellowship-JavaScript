@@ -32,7 +32,7 @@ exports.banking = (amount, limit) => {
                     if (withdraw > amount) {
                         console.log("Cash is not available please try later");
                         //withdraw=read.question("Enter the withdraw amount whithin--" +amount+ "\n");
-                        obj.enqueue();
+                        obj.deleteLast();
 
                     }
                     else {

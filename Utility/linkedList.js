@@ -189,7 +189,7 @@ class LinkedList {
             this.size++
         }
         else {
-            while (current.next && node.data >= current.next.data) {
+            while (current.next && node.data >= current.next.data) {              //2 4 5 7 8-----6
                 current = current.next;
             }
             node.next = current.next;

@@ -1,5 +1,5 @@
 /********************************************************************
-* @Execution    : Desltop/pradeep/AlgorithmPrograms $ node queuePalindrome.js
+* @Execution    : Desltop/pradeep/Data Structure $ node queuePalindrome.js
 * @description  : Palindrome-Checker
 * @Purpose      : check given string is plainddome or not
 * @file         : Palindrome

@@ -1,9 +1,9 @@
 class Node{
-    constructor(data)
+    constructor(data, prev=null)
     {
         this.data=data;
         this.next=null;
-        this.prev=null;
+        this.prev=prev;
        
     }   
 
@@ -14,9 +14,14 @@ class Stack{
         this.size=0;
     }
 
-    isEmpty()
-    {
-        return this.top==null;
+    // isEmpty()
+    // {
+    //     return this.top==null;
+    // }
+
+    isempty() {
+        if (!this.top) return true;
+        return false;
     }
 
     push(data){
@@ -44,29 +49,41 @@ class Stack{
     {
         return this.size;
     }
-    pop(){
-        if(!this.top)
-        return this.pop;
-        else{
-            let temp=this.top;
-            this.top=this.top.prev;
+    // pop(){
+    //     if(!this.top)
+    //     return this.pop;
+    //     else{
+    //         let temp=this.top;
+    //         this.top=this.top.prev;
+            
+    //         return temp.data;
+
+    //     }
+    //  }
+     pop() {
+        if (!this.top) this.push('');
+        else {
+            let temp = this.top;
+            this.top = this.top.prev;
             return temp.data;
         }
-     }
-     
+    }
 
-
-
+    
 }
 
 // var st=new Stack();
 
-// console.log(st.isEmpty());
+// // console.log(st.isEmpty());
 // st.push(1);
 // st.push(2);
 // st.push(3);
 // st.push(4);
-// st.disp(5);
-// console.log("size",st.size);
-// console.log("pop",st.pop());
+
+// // console.log("size",st.size);
+// // console.log("pop",st.pop());
+
+// // st.pop();
+// // st.pop();
+// st.disp();
 module.exports={Stack};

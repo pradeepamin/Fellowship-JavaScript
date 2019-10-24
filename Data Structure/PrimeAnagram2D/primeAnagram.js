@@ -39,7 +39,7 @@ for(let index=0;index<10;index++)
             if(Impt.checkAnagram1(m,n))
             {
                 b.push(m);
-                b.push(n);  
+                b.push(n);   
             }
         }
     }

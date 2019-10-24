@@ -1,49 +1,31 @@
-var util = require('util');
-var utility = require('../../../../../../admin1/Documents/prp/javaScript_FR-master/Utility/utility');
-var path = require('../../../../../Documents/prp/javaScript_FR-master/DataStructure_Utility/bintree')
-var readline = require('readline-sync');
-/**
- * Function defination.
- */
-function calender() {
-    var month = readline.questionInt("Enter the month : ");
-    var year = readline.questionInt("Enter the year : ")
-    var week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-    var dates = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    var day = utility.dayOfWeek(1, month, year);
-    var leap = path.leap(year);
-
-    if (leap == true) {
-        dates[2] = 29;
-    }
-    console.log();
-    console.log("          " + months[month - 1] + " " + year);
-
-    for (var i = 0; i < week.length; i++) {
-        util.print(week[i] + "  ");
-    }
-    console.log();
-    for (var i = 0; i < (day * 5); i++) {
-        util.print(" ");
-    }
-
-    for (var i = 1; i <= dates[month]; i++) {
-        if (i < 10) {
-            util.print(" " + i + "   ");
-        }
-
-        if (i > 9) {
-            util.print("" + i + "   ")
-        }
-
-        if ((i + day) % 7 == 0) {
-            console.log();
-        }
-    }
-    console.log("\n\n");
+const dow = require('../../Data Structure/Calender/dayOfWeekBL')
+const LY = require('../../Data Structure/Calender/LeapYearBL')
+const cal = require('../../Data Structure/Calender/calenderBL')
+let m = parseInt(process.argv[2]);
+let y = parseInt(process.argv[3]);
+if (0 < m <= 12 && 0 < y <= 9999) {
+    d0 = dow.dayOfWeek(1, m, y);
+    console.log("day",d0);
 }
-/**
- * function calls
- */
-calender();
+let md;
+if (LY.leapYear(y) && m == 2) {
+    md = 29
+}
+else if (!LY.leapYear(y) && m == 2) {
+     md = 28
+}
+else if ([1, 3, 5, 7, 8, 10, 12].includes(m)) {
+     md = 31
+}
+else if ([4, 6, 9, 11].includes(m)) {
+    md = 30
+}
+data = cal.calendar(d0, md);
+
+data.forEach(element => {
+    str = "";
+    element.forEach(el => {
+        str = str + el + ' ';
+    })
+    console.log(str, '\n');
+});

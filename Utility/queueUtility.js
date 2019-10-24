@@ -110,22 +110,21 @@ class Queue {
     }
 
 }
-let q=new Queue();
-q.enqueue(10);
-q.enqueue(20);
-q.enqueue(30);
-q.enqueue(40);
-q.enqueue(50);
-
-q.rearpop();
-
-//  q.dequeue();
-// // //q.dequeue();
-// // q.deque();
+// let q=new Queue();
+// q.enqueue(10);
+// q.enqueue(20);
+// q.enqueue(30);
+// q.enqueue(40);
+// q.enqueue(50);
 
 // q.rearpop();
-// q.deleteLast();
-// let y=q.deleteLast();
-// console.log(y);
- q.show();
-//module.exports = { Queue };
+
+// //  q.dequeue();
+// // // //q.dequeue();
+// // // q.deque();
+
+// q.rearpop(); q.deleteLast();
+// // let y=q.deleteLast();
+// // console.log(y);
+//  q.show();
+module.exports = { Queue };
