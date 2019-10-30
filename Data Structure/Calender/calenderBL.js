@@ -1,4 +1,4 @@
-getCal = (d0, md) => {
+calendar = (d0, md) => {
     let matrix = [];
     matrix.push(["sun", "mon", "tue", "wed", "thu", "fri", "sat"]);
     let k = 1;

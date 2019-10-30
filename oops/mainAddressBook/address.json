@@ -1,0 +1,20 @@
+[
+    {
+        "firstname": "pradeep",
+        "lastname": "kaup",
+        "houseno": "135",
+        "city": "jpnagar",
+        "district": "banglore"
+        
+    },
+   
+   
+    {
+        "firstname": "archana",
+        "lastname": "naval",
+        "houseno": "120",
+        "city": "kaup",
+        "district": "udupi"
+        
+    }
+]

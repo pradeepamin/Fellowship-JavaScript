@@ -16,6 +16,8 @@ exports.parenthese = (express) => {
             s.pop();
     });
     //at last if the stack is empty that means expression is balanced else not balanced
-    if (s.isempty()) console.log('arithematic expression ' + express + " is balanced");
-    else console.log('arithematic expression ' + express + " is not balanced");
+    if (s.isempty()) 
+    console.log('arithematic expression ' + express + " is balanced");
+    else 
+    console.log('arithematic expression ' + express + " is not balanced");
 }

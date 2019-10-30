@@ -1,0 +1,54 @@
+{
+    
+        "rice": [
+            {
+                "name": "India gate",
+                "weight": "10",
+                "price": "10"
+            },
+            {
+                "name": "HJK",
+                "weight": "5",
+                "price": "60"
+            },
+            {
+                "name": "Basmathi",
+                "weight": "6",
+                "price": "25"
+            }
+        ],
+        "wheat": [
+            {
+                "name": "Vivita",
+                "weight": "25",
+                "price": "30"
+            },
+            {
+                "name": "Ashirvad",
+                "weight": "10",
+                "price": "50"
+            },
+            {
+                "name": "Local",
+                "weight": "56",
+                "price": "98"
+            }
+        ],
+        "pulse": [
+            {
+                "name": "Greengram",
+                "weight": "3",
+                "price": "9"
+            },
+            {
+                "name": "corn",
+                "weight": "10",
+                "price": "25"
+            },
+            {
+                "name": "channa",
+                "weight": "10",
+                "price": "96"
+            }
+        ]
+}
