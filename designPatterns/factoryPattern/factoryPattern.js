@@ -1,40 +1,68 @@
-function pc(name){
-    this.name=name;
-    this.type="Produce PC";
+class Company{
+    constructor(key){
+        this.key=key;
+    }
 }
-function laptop(name){
-    this.name=name;
-    this.type="Produce Laptop";
+class Pc extends Company{
+    constructor(key,name){
+        super(key)
+        this.name=name;
+        this.type="Product PC";
+    }
 }
-function server(name){
-    this.name=name;
-    this.type="Produce Server";
+class Laptop extends Company{
+    constructor(key,name){
+        super(key)
+        this.name=name;
+        this.type="Product Laptop";
+    }
 }
+
+class CompanyServer extends Company{
+    constructor(key,name){
+        super(key)
+        this.name=name;
+        this.type="Product server";
+    }
+}
+
+// function pc(name){
+//     this.name=name;
+//     this.type="Produce PC";
+// }
+// function laptop(name){
+//     this.name=name;
+//     this.type="Produce Laptop";
+// }
+// function server(name){
+//     this.name=name;
+//     this.type="Produce Server";
+// }
 
 function computerFactory()
 {
-    this.device=(name,type)=>{
+    this.device=(key,name,type)=>{
         switch(type)
         {
-            case 1: return new pc(name);
+            case 1: return new Pc(key,name);
             break;
-            case 2: return new laptop(name);
+            case 2: return new Laptop(key,name);
             break;
-            case 3: return new server(name);
+            case 3: return new CompanyServer(key,name);
         }
     }
 }
 
 function say()
 {
-    console.log("The product " +this.name+ " belongs " +this.type);
+    console.log(this.key+"The product " +this.name+ " belongs " +this.type);
 }
 
-const companyfactory=new computerFactory()
+const cf=new computerFactory()
 let factory=[];
-factory.push(companyfactory.device("zebronic",1));
-factory.push(companyfactory.device("lenevo",2));
-factory.push(companyfactory.device("shell",3));
+factory.push(cf.device("C1","zebronic",1));
+factory.push(cf.device("P1","lenevo",2));
+factory.push(cf.device("S1","shell",2));
 
 factory.forEach(ele=>{
     say.call(ele);
