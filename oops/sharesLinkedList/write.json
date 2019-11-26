@@ -1,1 +1,47 @@
-[{"name":"rr","shares":2,"price":3},{"name":"","shares":null,"price":4},{"name":"ssss","shares":44,"price":0},{"name":"hai","shares":56,"price":789},{"name":"apple","shares":54,"price":250},{"name":"reliance","shares":100,"price":12500},{"name":"mahindra","shares":87,"price":100},{"name":"irrna","shares":11,"price":2222},{"name":"krishna","shares":8000,"price":4000}]
+[
+    {
+        "name": "rr",
+        "shares": 2,
+        "price": 3
+    },
+    {
+        "name": "",
+        "shares": null,
+        "price": 4
+    },
+    {
+        "name": "ssss",
+        "shares": 44,
+        "price": 0
+    },
+    {
+        "name": "hai",
+        "shares": 56,
+        "price": 789
+    },
+    {
+        "name": "apple",
+        "shares": 54,
+        "price": 250
+    },
+    {
+        "name": "reliance",
+        "shares": 100,
+        "price": 12500
+    },
+    {
+        "name": "mahindra",
+        "shares": 87,
+        "price": 100
+    },
+    {
+        "name": "pradeep",
+        "shares": 11,
+        "price": 2222
+    },
+    {
+        "name": "kri",
+        "shares": 8000,
+        "price": 4000
+    }
+]

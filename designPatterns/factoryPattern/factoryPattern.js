@@ -26,19 +26,6 @@ class CompanyServer extends Company{
     }
 }
 
-// function pc(name){
-//     this.name=name;
-//     this.type="Produce PC";
-// }
-// function laptop(name){
-//     this.name=name;
-//     this.type="Produce Laptop";
-// }
-// function server(name){
-//     this.name=name;
-//     this.type="Produce Server";
-// }
-
 function computerFactory()
 {
     this.device=(key,name,type)=>{

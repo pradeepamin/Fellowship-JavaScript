@@ -10,7 +10,7 @@
 *
 *********************************************************************/
 
-const Imp=require('../Functional/FlipCoinBL')
+const Imp=require('../FlipCoin/FlipCoinBL')
 const sc=require('readline-sync');
 let toss=sc.question("Enter the number of times you want to toss\n");
 Imp.Flip_Coin(toss);
