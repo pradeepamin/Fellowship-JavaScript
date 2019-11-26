@@ -9,6 +9,8 @@ module.exports.deckOfCard = (suits, values) => {
     for (let i = 0; i < suits.length; i++) {
         for (let j = 0; j < values.length; j++) {
             //var card={value:values[j],suit:suits[i]};
+            // console.log("values[j]",values[j])
+            console.log("suites[j]",suits[i])
             deck.push(values[j] + " " + suits[i]);
         }
     }
@@ -22,6 +24,6 @@ module.exports.deckOfCard = (suits, values) => {
 module.exports.shuffle = () => {
     
     deck.sort(() => Math.random());
-    console.log(deck);
+    console.log("aLL",deck);
 
 }
