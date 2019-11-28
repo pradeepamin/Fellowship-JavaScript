@@ -21,6 +21,7 @@ let data1 = readJson();
 let object = new Model.AddressBook();
 
 function address(data1) {
+    try{
     console.log("Enter 1- for add person information");
     console.log("Enter 2- for update person information");
     console.log("Enter 3- for remove person information");
@@ -51,5 +52,8 @@ function address(data1) {
             console.log("Wrong input");
             return address(data);
     }
+} catch (e) {
+    console.log(e);
+}
 }
 address(data1);

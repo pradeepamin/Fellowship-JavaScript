@@ -36,65 +36,80 @@ var AddressBook = /** @class */ (function (_super) {
     };
     // create new address book function
     AddressBook.prototype.addPerson = function (data) {
-        var fname = read.question("Enter firstname of person :");
-        var lname = read.question("Enter lastname of person :");
-        var city1 = read.question("Enter city of person:");
-        var state1 = read.question("Enter state of person:");
-        var phonenum1 = read.question("Enter phonenumber:");
-        var zip = read.question("Enter zip code:");
-        // create object of Person class
-        var o = new AddressBook(fname, lname, city1, state1, phonenum1, zip);
-        console.log("data: ", data);
-        console.log("object: ", o);
-        /**
-        * push each value into json
-        */
-        data.Person.push(o);
-        // write data into json file
-        this.writeJson(data);
+        try {
+            var fname = read.question("Enter firstname of person :");
+            var lname = read.question("Enter lastname of person :");
+            var city1 = read.question("Enter city of person:");
+            var state1 = read.question("Enter state of person:");
+            var phonenum1 = read.question("Enter phonenumber:");
+            var zip = read.question("Enter zip code:");
+            // create object of Person class
+            var o = new AddressBook(fname, lname, city1, state1, phonenum1, zip);
+            console.log("data: ", data);
+            console.log("object: ", o);
+            /**
+            * push each value into json
+            */
+            data.Person.push(o);
+            // write data into json file
+            this.writeJson(data);
+        }
+        catch (e) {
+            console.log(e);
+        }
     };
     // updating address book function
     AddressBook.prototype.updatePerson = function (data) {
-        var name = read.question("enter Firstname of person :");
-        for (var index1 = 0; index1 < data.Person.length; index1++) {
-            if (data.Person[index1].firstname == name) {
-                var index = data.Person.indexOf(data.Person[index1]);
-                console.log(" select which information to be update ");
-                console.log("1: To change First Name");
-                console.log("2: To change Last Name");
-                console.log("3: To change Phone Number");
-                console.log("4: To change city");
-                console.log("5: To change state");
-                console.log("6: To change Zip");
-                var num1 = read.questionInt("select any number:\n");
-                switch (num1) {
-                    case 1:
-                        this.firsname(data, index);
-                        break;
-                    case 2:
-                        this.lasname(data, index);
-                        break;
-                    case 3:
-                        this.phonenumber(data, index);
-                        break;
-                    case 4:
-                        this.city1(data, index);
-                        break;
-                    case 5:
-                        this.state1(data, index);
-                        break;
-                    case 6:
-                        this.zipcode(data, index);
-                        break;
+        try {
+            var name_1 = read.question("enter Firstname of person :");
+            for (var index1 = 0; index1 < data.Person.length; index1++) {
+                if (data.Person[index1].firstname == name_1) {
+                    var index = data.Person.indexOf(data.Person[index1]);
+                    console.log(" select which information to be update ");
+                    console.log("1: To change First Name");
+                    console.log("2: To change Last Name");
+                    console.log("3: To change Phone Number");
+                    console.log("4: To change city");
+                    console.log("5: To change state");
+                    console.log("6: To change Zip");
+                    var num1 = read.questionInt("select any number:\n");
+                    switch (num1) {
+                        case 1:
+                            this.firsname(data, index);
+                            break;
+                        case 2:
+                            this.lasname(data, index);
+                            break;
+                        case 3:
+                            this.phonenumber(data, index);
+                            break;
+                        case 4:
+                            this.city1(data, index);
+                            break;
+                        case 5:
+                            this.state1(data, index);
+                            break;
+                        case 6:
+                            this.zipcode(data, index);
+                            break;
+                    }
                 }
             }
+        }
+        catch (e) {
+            console.log(e);
         }
     };
     // update first name
     AddressBook.prototype.firsname = function (data, index) {
-        var fname1 = read.question("Enter the First name to be changed:");
-        data.Person[index].firstname = fname1;
-        this.writeJson(data);
+        try {
+            var fname1 = read.question("Enter the First name to be changed:");
+            data.Person[index].firstname = fname1;
+            this.writeJson(data);
+        }
+        catch (e) {
+            console.log(e);
+        }
     };
     // update last name
     AddressBook.prototype.lasname = function (data, index) {
@@ -128,16 +143,21 @@ var AddressBook = /** @class */ (function (_super) {
     };
     // removing or deleting particulor person
     AddressBook.prototype.removeperson = function (data) {
-        var name = read.question("Enter the name of person to remove from address book ");
-        var person = data.Person;
-        for (var index1 in person) {
-            if (data.Person[index1].firstname == name) {
-                var index = data.Person.indexOf(data.Person[index1]);
-                // This will remove the object that name of the person
-                var dd = data.Person.splice(index, 1);
-                console.log("deleted person details : " + dd);
+        try {
+            var name_2 = read.question("Enter the name of person to remove from address book ");
+            var person = data.Person;
+            for (var index1 in person) {
+                if (data.Person[index1].firstname == name_2) {
+                    var index = data.Person.indexOf(data.Person[index1]);
+                    // This will remove the object that name of the person
+                    var dd = data.Person.splice(index, 1);
+                    console.log("deleted person details : " + dd);
+                }
+                this.writeJson(data);
             }
-            this.writeJson(data);
+        }
+        catch (e) {
+            console.log(e);
         }
     };
     /*
@@ -165,9 +185,14 @@ var AddressBook = /** @class */ (function (_super) {
         console.log(result);
     };
     AddressBook.prototype.printadd = function (data) {
-        var person = data.Person;
-        for (var key in person) {
-            console.log(person[key]);
+        try {
+            var person = data.Person;
+            for (var key in person) {
+                console.log(person[key]);
+            }
+        }
+        catch (e) {
+            console.log(e);
         }
     };
     return AddressBook;
