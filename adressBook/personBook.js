@@ -1,18 +1,17 @@
 /********************************************************************
-* @Execution    : /Desktop/Pradeep/FelloshipJavaScript/TypeScript/adressBook$ 
-* @description  : Address Book
-* @overview     : TypeScript 
-* @file         : tsc personBook.ts, tsc personBookBL.ts, node personBookjs
+* @Execution    : /Desktop/Pradeep/FelloshipJavaScript/TypeScript/adressBook$
+* @description  : Address Book to record personal details
+* @overview     : TypeScript
+* @file         : personBook.ts
 * @author       : PRADEEP B AMIN <pradeepbamin5gmail.com>
 * @version      : 2.7.2
-* @since        : 25-Nov-2019
+* @since        : 24-Nov-2019
 *
 *********************************************************************/
-
 //  import { AddressBook } from './personBookBL'; 
 var input = require('readline-sync');
 var file = require('fs');
-var Model = require('../../TypeScript/adressBook/personBookBL');
+var Model = require('../adressBook/personBookBL');
 function readJson() {
     return file.readFileSync('/home/admin1/Desktop/Pradeep/FelloshipJavaScript/TypeScript/adressBook/book.json', 'utf8');
 }

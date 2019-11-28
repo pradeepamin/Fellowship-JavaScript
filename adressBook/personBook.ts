@@ -13,12 +13,12 @@ declare var require: any
 //  import { AddressBook } from './personBookBL'; 
 const input = require('readline-sync');
 const file = require('fs');
-var Model = require('../adressBook/personBookBL');
+let Model = require('../adressBook/personBookBL');
 function readJson() {
     return file.readFileSync('/home/admin1/Desktop/Pradeep/FelloshipJavaScript/TypeScript/adressBook/book.json', 'utf8');
 }
-var data1 = readJson();
-var object = new Model.AddressBook();
+let data1 = readJson();
+let object = new Model.AddressBook();
 
 function address(data1) {
     console.log("Enter 1- for add person information");
@@ -28,8 +28,8 @@ function address(data1) {
     console.log("Enter 5- for sort the addressbook based on firstname");
     console.log("Enter 6- for Print all addressbook information");
     console.log("Enter 7- to exit")
-    var num: number = input.questionInt("Select  any number:");
-    var data = JSON.parse(data1);
+    let num: number = input.questionInt("Select  any number:");
+    let data = JSON.parse(data1);
     switch (num) {
         case 1: object.addPerson(data);
         address(data1);

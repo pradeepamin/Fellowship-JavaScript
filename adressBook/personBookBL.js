@@ -131,7 +131,6 @@ var AddressBook = /** @class */ (function (_super) {
         var name = read.question("Enter the name of person to remove from address book ");
         var person = data.Person;
         for (var index1 in person) {
-            // for (let i = 0; i < data.Person.length; i++) {
             if (data.Person[index1].firstname == name) {
                 var index = data.Person.indexOf(data.Person[index1]);
                 // This will remove the object that name of the person
@@ -141,6 +140,9 @@ var AddressBook = /** @class */ (function (_super) {
             this.writeJson(data);
         }
     };
+    /*
+        This function sort the firstName
+    */
     AddressBook.prototype.sortfname = function (data) {
         var fname = data.Person;
         function sortbyfname(a, b) {
